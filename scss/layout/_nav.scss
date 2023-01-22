@@ -1,0 +1,46 @@
+.nav {
+    background-color: aliceblue;
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        font-weight: bold;
+        margin-left: 40px;
+        font-size: 10px;
+    }
+
+    &__bouton {
+        height: 15px;
+        width: 50px;
+        margin-right: 40px;
+        background-color: #0D6EFD;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        font-size: 10px;
+    }
+}
+
+
+@media  screen and (min-width: 1280px) {
+.nav {
+    height: 40px;
+    background-color: white;
+
+    &__logo {
+        margin-left: 150px;
+        font-size: 15px;
+    }
+
+    &__bouton {
+        margin-right: 150px;
+        font-size: 15px;
+        width: 70px;
+        height: 20px;
+    }
+}
+}

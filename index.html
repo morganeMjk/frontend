@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav">
+        <p class="nav__logo">Logo Placeholder</p>
+        <input type="button" value="Sign Up" class="nav__bouton">
+    </nav>
+
+    <header class="header">
+        <h1 class="header__titre">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <div class="header__input">
+            <input type="email" name="mail" id="mail" placeholder="Email address" class="header__input__mail">
+            <input type="button" value="Submit" class="header__input__bouton">
+        </div>
+    </header>
+
+    <main>
+        <div class="articles">
+            <article class="articles__box">
+                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
+                <div class="articles__box__texte">
+                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
+                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
+                </div>
+            </article>
+            <article class="articles__box">
+                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
+                <div class="articles__box__texte">
+                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
+                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
+                </div>
+            </article>
+            <article class="articles__box">
+                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
+                <div class="articles__box__texte">
+                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
+                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
+                </div>
+            </article>
+        </div>
+        <section class="contact">
+            <h2 class="contact__titre">Contact us</h2>
+            <form method="post" action="traintement.php">
+                <fieldset class="contact__formulaire">
+                    <div class="contact__formulaire__part">
+                        <input type="text" name="firstname" id="firstname" placeholder="Firstname" class="contact__formulaire__input">
+                        <input type="text" name="lastname" id="lastname" placeholder="Lastname" class="contact__formulaire__input">
+                    </div>
+                    <div class="contact__formulaire__part">
+                        <input type="email" name="email" id="email" placeholder="Email address" class="contact__formulaire__input">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone number" maxlength="10" class="contact__formulaire__input">
+                    </div>
+                    <textarea name="message" id="message" cols="18" rows="8" placeholder="Type your message" class="contact__formulaire__input"></textarea>
+                    <button type="button" class="contact__formulaire__submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__ul">
+            <li class="footer__ul__li"><a href="#" class="footer__ul__a">About</a> - </li>
+            <li class="footer__ul__li"><a href="#" class="footer__ul__a"> Contact</a> - </li>
+            <li class="footer__ul__li"><a href="#" class="footer__ul__a"> Terms of Use</a> - </li>
+            <li class="footer__ul__li"><a href="#" class="footer__ul__a"> Privacy Policy</a></li>
+        </ul>
+        <div class="footer__rights">
+            <p class="footer__rights__p">My website 2022</p>
+            <p class="footer__rights__p--active">-</p>
+            <p class="footer__rights__p">All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

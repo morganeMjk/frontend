@@ -1,0 +1,119 @@
+.contact {
+    margin-top: 30px;
+
+        &__titre {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        &__formulaire {
+            width: 181px;
+            height: 240px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            padding-top: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: none;
+
+                &__input {
+                    width: 123px;
+                    background-color: #ECECEC;
+                    border: 1px solid #B1B1B1;
+                    border-radius: 60px;
+                    padding-left: 15px;
+                    font-size: 10px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                &__submit {
+                background-color: #0D6EFD;
+                border: none;
+                color: white;
+                border-radius: 60px;
+                width: 43px;
+                text-align: center;
+                align-self: flex-end;
+                font-size: 10px;
+                }
+        }
+}
+
+#message {
+    border-radius: 10px;
+    height: 101px;
+    resize: none;
+}
+
+
+
+@media  screen and (min-width: 481px) {
+.contact__titre {
+    font-size: 22px;
+}
+
+.contact__formulaire {
+    width: 400px;
+
+    &__input {
+        width: 150px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+    &__submit {
+        font-size: 12px;
+        width: 50px;
+    }
+}
+
+.contact__formulaire__part {
+display: flex;
+gap: 10px;
+}
+
+#message {
+    width: 330px;
+    height: 140px;
+}
+}
+
+
+@media  screen and (min-width: 1280px) {
+.contact__titre {
+    border-top: 1px solid #B1B1B1;
+    padding-top: 80px;
+    width: 50%;
+    margin: 40px auto;
+    font-size: 28px;
+}
+
+.contact__formulaire {
+    box-shadow: 1px 1px 1px 1px #B1B1B1;
+    width: 500px;
+    height: 400px;
+    margin-bottom: 200px;
+
+    &__input {
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    &__submit {
+        font-size: 15px;
+        width: 60px;
+        align-self: flex-start;
+        margin-left: 25px;
+        height: 25px;
+    }
+}
+
+#message {
+    width: 430px;
+    height: 160px;
+}
+}
