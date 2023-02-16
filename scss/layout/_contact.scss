@@ -29,6 +29,11 @@
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
 
+                &__error {
+                    color: red;
+                    display: none;
+                }
+
                 &__submit {
                 background-color: #0D6EFD;
                 border: none;
@@ -42,13 +47,16 @@
         }
 }
 
-#message {
+#messageInput {
     border-radius: 10px;
     height: 101px;
     resize: none;
 }
 
-
+#inputLabel {
+    display: flex;
+    flex-direction: column;
+}
 
 @media  screen and (min-width: 481px) {
 .contact__titre {
@@ -75,7 +83,7 @@ display: flex;
 gap: 10px;
 }
 
-#message {
+#messageInput {
     width: 330px;
     height: 140px;
 }
@@ -112,8 +120,9 @@ gap: 10px;
     }
 }
 
-#message {
+#messageInput{
     width: 430px;
     height: 160px;
 }
 }
+

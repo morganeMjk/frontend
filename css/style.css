@@ -226,6 +226,10 @@ body {
   font-size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.contact__formulaire__error {
+  color: red;
+  display: none;
+}
 .contact__formulaire__submit {
   background-color: #0D6EFD;
   border: none;
@@ -237,10 +241,15 @@ body {
   font-size: 10px;
 }
 
-#message {
+#messageInput {
   border-radius: 10px;
   height: 101px;
   resize: none;
+}
+
+#inputLabel {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 481px) {
@@ -263,7 +272,7 @@ body {
     display: flex;
     gap: 10px;
   }
-  #message {
+  #messageInput {
     width: 330px;
     height: 140px;
   }
@@ -294,7 +303,7 @@ body {
     margin-left: 25px;
     height: 25px;
   }
-  #message {
+  #messageInput {
     width: 430px;
     height: 160px;
   }

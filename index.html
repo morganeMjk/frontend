@@ -46,18 +46,34 @@
         </div>
         <section class="contact">
             <h2 class="contact__titre">Contact us</h2>
-            <form method="post" action="traintement.php">
+            <form method="post" action="traintement.php" id="contactForm">
                 <fieldset class="contact__formulaire">
                     <div class="contact__formulaire__part">
-                        <input type="text" name="firstname" id="firstname" placeholder="Firstname" class="contact__formulaire__input">
-                        <input type="text" name="lastname" id="lastname" placeholder="Lastname" class="contact__formulaire__input">
+                        <div id="inputLabel">
+                            <input type="text" name="firstname" id="firstNameInput" placeholder="Firstname" class="contact__formulaire__input">
+                            <label for="firstname" id="firstNameError" class="contact__formulaire__error">Saisissez votre prénom</label>
+                        </div>
+                        <div id="inputLabel">
+                            <input type="text" name="lastname" id="lastNameInput" placeholder="Lastname" class="contact__formulaire__input">
+                            <label for="lastname" id="lastNameError" class="contact__formulaire__error">Saisissez votre nom</label>
+                        </div>
+
                     </div>
                     <div class="contact__formulaire__part">
-                        <input type="email" name="email" id="email" placeholder="Email address" class="contact__formulaire__input">
-                        <input type="tel" name="phone" id="phone" placeholder="Phone number" maxlength="10" class="contact__formulaire__input">
+                        <div id="inputLabel">
+                            <input type="email" name="email" id="emailInput" placeholder="Email address" class="contact__formulaire__input">
+                            <label for="email" id="emailError" class="contact__formulaire__error">Saisissez une adresse mail valide</label>
+                        </div>
+                        <div id="inputLabel">
+                            <input type="tel" name="phone" id="phoneInput" placeholder="Phone number" maxlength="10" class="contact__formulaire__input">
+                            <label for="phone" id="phoneError" class="contact__formulaire__error">Saisissez un numéro de téléphone valide</label>
+                        </div>
                     </div>
-                    <textarea name="message" id="message" cols="18" rows="8" placeholder="Type your message" class="contact__formulaire__input"></textarea>
-                    <button type="button" class="contact__formulaire__submit">Submit</button>
+                    <div id="inputLabel">
+                        <textarea name="message" id="messageInput" cols="18" rows="8" placeholder="Type your message" class="contact__formulaire__input"></textarea>
+                        <label for="message" id="messageError" class="contact__formulaire__error">Votre message doit contenir au moins 10 caractères</label>
+                    </div> 
+                        <button type="submit" class="contact__formulaire__submit">Submit</button>
                 </fieldset>
             </form>
         </section>
@@ -76,5 +92,8 @@
             <p class="footer__rights__p">All rights reserved</p>
         </div>
     </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
