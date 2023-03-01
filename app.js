@@ -1,3 +1,101 @@
+class Carrousel {
+    constructor(articles, htmlId) {
+        this.articles = articles;
+        this.htmlId = htmlId;
+        this.carrouselArticleContainer = document.getElementById(htmlId)
+        this.indexActuel = 0;
+        this.CarrouselElement = document.createElement('p');
+        this.display();
+    }
+
+    display = () => {
+
+        this.carrouselArticleContainer.innerHTML = "";
+
+        const article = this.articles[this.indexActuel] ;     
+
+        const articleContainer = document.createElement('article');
+        articleContainer.classList.add('articles__box');
+
+        const articleIcone = document.createElement('i');
+
+        articleIcone.classList.add('fa-sharp');
+        articleIcone.classList.add('fa-solid');
+        articleIcone.classList.add(article.icone);
+        articleIcone.classList.add('articles__box__logo');
+
+        const articleContent = document.createElement('div');
+        articleContent.classList.add('articles__box__texte');
+
+        const articleTitle = document.createElement('h2');
+        articleTitle.classList.add('articles__box__texte__titre');
+        articleTitle.textContent = article.titre;
+
+        const articleP = document.createElement('p');
+        articleP.classList.add('articles__box__texte__p');
+        articleP.textContent = article.contenu;
+
+        this.carrouselArticleContainer.appendChild(articleContainer);
+
+        articleContainer.appendChild(articleIcone);
+        articleContainer.appendChild(articleContent);
+        articleContent.appendChild(articleTitle);
+        articleContent.appendChild(articleP);
+
+    }
+
+    suivant = () => {
+        if (!this.articles[this.indexActuel + 1]) {
+            this.indexActuel = 0;
+        } else {
+            this.indexActuel += 1;
+        }
+        this.display();
+    }
+
+    precedent = () => {
+        if (!this.articles[this.indexActuel - 1]) {
+            this.indexActuel = this.articles.length - 1;
+        } else {
+            this.indexActuel -= 1 ;
+        }
+        this.display()
+    }
+}
+
+const articlesArray = [
+    {
+        icone: "fa-puzzle-piece",
+        titre: "Article A",
+        contenu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores."
+    },
+    {
+        icone: "fa-puzzle-piece",
+        titre: "Article B",
+        contenu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores."
+    },
+    {
+        icone: "fa-puzzle-piece",
+        titre: "Article C",
+        contenu: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores."
+    },
+
+]
+
+const carrousel1 = new Carrousel(articlesArray, "carrouselContent");
+
+const previousArrow = document.getElementById('precedent');
+const nextArrow = document.getElementById('suivant');
+
+previousArrow.addEventListener('click', () => carrousel1.precedent());
+nextArrow.addEventListener('click', () => carrousel1.suivant())
+
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+
 const contactFrom = document.getElementById('contactForm');
 
 contactFrom.addEventListener('submit', (event) => {
@@ -52,7 +150,7 @@ contactFrom.addEventListener('submit', (event) => {
         errors.lastName = true;
         lastNameError.style.display = 'block';
         lastNameInput.focus();
-    }    
+    }
     if (!formData.email || !emailRegex.test(formData.email)) {
         errors.email = true;
         emailError.style.display = 'block';

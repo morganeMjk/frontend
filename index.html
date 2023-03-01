@@ -9,40 +9,25 @@
 <body>
     <nav class="nav">
         <p class="nav__logo">Logo Placeholder</p>
-        <input type="button" value="Sign Up" class="nav__bouton">
+        <button class="nav__bouton">Sign Up</button>
     </nav>
 
     <header class="header">
         <h1 class="header__titre">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
         <div class="header__input">
+        <form action="post">
             <input type="email" name="mail" id="mail" placeholder="Email address" class="header__input__mail">
             <input type="button" value="Submit" class="header__input__bouton">
+        </form>
         </div>
     </header>
 
     <main>
         <div class="articles">
-            <article class="articles__box">
-                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
-                <div class="articles__box__texte">
-                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
-                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
-                </div>
-            </article>
-            <article class="articles__box">
-                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
-                <div class="articles__box__texte">
-                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
-                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
-                </div>
-            </article>
-            <article class="articles__box">
-                <i class="fa-sharp fa-solid fa-puzzle-piece articles__box__logo"></i>
-                <div class="articles__box__texte">
-                    <h2 class="articles__box__texte__titre">Lorem ipsum</h2>
-                    <p class="articles__box__texte__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima repellendus itaque nesciunt repellat dolores.</p>
-                </div>
-            </article>
+            <button id="precedent" class="fleche"><</button>
+            <div class="articles" id="carrouselContent"></div>
+            <button id="suivant" class="fleche">></button>
+
         </div>
         <section class="contact">
             <h2 class="contact__titre">Contact us</h2>
