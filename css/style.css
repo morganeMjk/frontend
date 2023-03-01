@@ -21,6 +21,10 @@
   border: none;
   color: white;
   font-size: 10px;
+  cursor: pointer;
+}
+.nav__bouton:hover {
+  background-color: #0e66eb;
 }
 
 @media screen and (min-width: 1280px) {
@@ -70,6 +74,10 @@
   color: white;
   border-radius: 10px;
   width: 57px;
+  cursor: pointer;
+}
+.header__input__bouton:hover {
+  background-color: #0e66eb;
 }
 
 @media screen and (min-width: 481px) {

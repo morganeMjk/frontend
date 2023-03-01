@@ -22,6 +22,11 @@
         border: none;
         color: white;
         font-size: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color:  #0e66eb;
+        }
     }
 }
 
